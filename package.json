@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0",
+    "astro": "^1.9.1",
     "prettier-plugin-astro": "^0.7.0"
   },
   "dependencies": {
