@@ -1,6 +1,5 @@
-import { defineConfig } from "cypress";
-
-export default defineConfig({
+module.export = {
+  projectID: "361bhh",
   e2e: {
     baseUrl: "http://localhost:3000/",
     supportFile: false,
@@ -8,4 +7,4 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-});
+}
