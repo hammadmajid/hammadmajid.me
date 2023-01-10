@@ -1,8 +1,15 @@
-# to use orbs, must use version >= 2.1
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@2
 workflows:
   build:
     jobs:
-      - cypress/run
+      - cypress/install
+      - cypress/run:
+          requires:
+            - cypress/install
+          record: true 
+          parallel: true
+          parallelism: 2 
+          start: npm start
+          wait-on: 'http-get://localhost:3000' 
