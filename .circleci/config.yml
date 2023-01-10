@@ -1,10 +1,7 @@
 version: 2.1
 
 orbs:
-  cypress: cypress-io/cypress@1
-
-docker:
-  - image: 'cypress/browsers:node16.14.0-chrome99-ff97'
+  cypress: cypress-io/cypress@2
 
 workflows:
   build:
@@ -14,6 +11,7 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
+          executor: cypress/base-16-14-2-slim
           record: true
           parallel: true
           parallelism: 2 
