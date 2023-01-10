@@ -1,0 +1,8 @@
+# to use orbs, must use version >= 2.1
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@2
+workflows:
+  build:
+    jobs:
+      - cypress/run
