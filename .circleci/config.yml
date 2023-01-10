@@ -8,7 +8,8 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-          record: true 
+          executor: cypress/base-14
+          record: true
           parallel: true
           parallelism: 2 
           start: npm start
