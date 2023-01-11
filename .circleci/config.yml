@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs:
+  cypress: cypress-io/cypress@2
+
+workflows:
+  build:
+    jobs:
+      - cypress/install
+
+      - cypress/run:
+          requires:
+            - cypress/install
+          executor: cypress/base-16-14-2-slim
+          record: true
+          parallel: true
+          parallelism: 2 
+          start: npm start
+          wait-on: 'http-get://localhost:3000' 
