@@ -5,7 +5,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Hammad Majid">
 	<main class="h-screen grid place-items-center">
 		<header class="text-center">
-			<h1 class="text-4xl font-semibold">Hammad Majid</h1>
+			<div class="grid place-items-center">
+				<img
+					src="/google-binary.webp"
+					alt="An illustration of an old computer"
+					class="rounded-full h-3/4"
+				/>
+			</div>
+			<div>
+				<h1 class="text-4xl font-semibold">Hammad Majid</h1>
+				<p>Front-end developer</p>
+			</div>
+			<div class="flex flex-row justify-evenly items-center mt-6">
+				<a
+					href="/contact"
+					class="bg-orange-200/80 ring-orange-200/80 ring-2 hover:bg-orange-300/80 hover:ring-orange-300/80 text-slate-900 transition-colors px-4 py-2 rounded-md"
+					><i class="fa-solid fa-envelope pr-2"></i>Contact</a
+				>
+				<a
+					href="https://github.com/hammadmajid"
+					class="ring-slate-100/90 hover:ring-orange-200/80 hover:text-orange-200/80 ring-2 px-4 py-2 rounded-md transition-colors"
+					><i class="fa-brands fa-github pr-2"></i>GitHub</a
+				>
+			</div>
 		</header>
 	</main>
 </BaseLayout>
