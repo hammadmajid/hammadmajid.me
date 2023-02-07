@@ -14,7 +14,9 @@ const { title } = Astro.props;
         ></script>
         <title>{title}</title>
     </head>
-    <body>
+    <body
+        class="bg-gradient-to-tr from-slate-900 via-gray-800 to-stone-900 text-slate-100 min-h-screen max-h-fit"
+    >
         <slot />
     </body>
 </html>
