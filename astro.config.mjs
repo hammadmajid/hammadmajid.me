@@ -10,7 +10,10 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://hammadmajid.com',
-  integrations: [tailwind(), sitemap(), svelte()]
+  integrations: [tailwind(), sitemap(), svelte(), partytown()]
 });
