@@ -1,5 +1,5 @@
 <script lang="ts">
-    const links: string[] = ["devlog", "log", "contact", "about"];
+    const links: string[] = ["devlog", "labs", "contact", "about"];
 </script>
 
 <nav class="text-neutral-200 py-5 px-4">
