@@ -22,21 +22,19 @@ const { title, description } = Astro.props as Props;
         <link href="/favicon.svg" rel="icon" />
         <title>{title}</title>
         <meta name="description" content={description} />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FN4NFCRDZ1"
-    ></script>
-    <script>
-        //@ts-ignore
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            //@ts-ignore
-            dataLayer.push(arguments);
-        }
-        //@ts-ignore
-        gtag("js", new Date());
-        //@ts-ignore
-        gtag("config", "G-FN4NFCRDZ1");
-    </script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-FN4NFCRDZ1"
+        ></script><script>
+            // @ts-nocheck
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-FN4NFCRDZ1");
+        </script></head
+    >
     <body
         class="bg-gradient-to-tr from-slate-900 via-gray-800 to-stone-900 text-slate-100 min-h-screen max-h-fit"
     >
