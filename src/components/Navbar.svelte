@@ -31,7 +31,7 @@
                     <li
                         class="hover:text-neutral-50 transition-colors capitalize"
                     >
-                        <a href={link} rel="prefetch">{link}</a>
+                        <a href={"/" + link} rel="prefetch">{link}</a>
                     </li>
                 {/each}
             </ul>
@@ -54,7 +54,9 @@
             <li
                 class="hover:text-neutral-50 hover:bg-slate-400/20 transition-colors capitalize p-2"
             >
-                <a href={link} rel="prefetch" class="block w-full">{link}</a>
+                <a href={"/" + link} rel="prefetch" class="block w-full"
+                    >{link}</a
+                >
             </li>
         {/each}
     </ul>
