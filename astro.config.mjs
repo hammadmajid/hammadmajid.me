@@ -13,7 +13,10 @@ import svelte from "@astrojs/svelte";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
+import prefetch from "@astrojs/prefetch";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://hammadmajid.com',
-  integrations: [tailwind(), sitemap(), svelte(), partytown()]
+  integrations: [tailwind(), sitemap(), svelte(), partytown(), prefetch()]
 });
