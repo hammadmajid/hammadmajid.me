@@ -1,5 +1,30 @@
 <script lang="ts">
-    const links: string[] = ["devlog", "labs", "contact", "about"];
+    interface Link {
+        name: string;
+        url: string;
+    }
+    const links: Link[] = [
+        {
+            name: "Devlog",
+            url: "/devlog",
+        },
+        {
+            name: "Labs",
+            url: "/labs",
+        },
+        {
+            name: "Contact",
+            url: "/contact",
+        },
+        {
+            name: "About",
+            url: "/about",
+        },
+        {
+            name: "Sponsor",
+            url: "https://patreon.com/hammadmajid",
+        },
+    ];
 </script>
 
 <nav class="text-neutral-200 py-5 px-4">
@@ -29,9 +54,9 @@
             <ul class="hidden md:flex items-center space-x-5">
                 {#each links as link}
                     <li
-                        class="hover:text-neutral-50 transition-colors capitalize"
+                        class="hover:text-neutral-50 transition-colors"
                     >
-                        <a href={"/" + link} rel="prefetch">{link}</a>
+                        <a href={link.url} rel="prefetch">{link.name}</a>
                     </li>
                 {/each}
             </ul>
@@ -59,10 +84,10 @@
     <ul class="hidden md:hidden space-y-1 pt-4" id="mobile-menu">
         {#each links as link}
             <li
-                class="hover:text-neutral-50 hover:bg-slate-400/20 transition-colors capitalize p-2"
+                class="hover:text-neutral-50 hover:bg-slate-400/20 transition-colors p-2"
             >
-                <a href={"/" + link} rel="prefetch" class="block w-full"
-                    >{link}</a
+                <a href={link.url} rel="prefetch" class="block w-full"
+                    >{link.name}</a
                 >
             </li>
         {/each}
