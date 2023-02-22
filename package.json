@@ -1,7 +1,7 @@
 {
-  "name": "@example/minimal",
+  "name": "hammadmajid/site",
   "type": "module",
-  "version": "0.0.1",
+  "version": "production",
   "private": true,
   "scripts": {
     "dev": "astro dev",
