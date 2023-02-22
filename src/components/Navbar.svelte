@@ -27,7 +27,7 @@
     ];
 </script>
 
-<nav class="text-neutral-200 py-5 px-4">
+<nav class="text-neutral-200 py-5 px-4 select-none">
     <div class="flex justify-between pb-3 border-b-2 border-b-neutral-400/50">
         <!-- desktop navigation -->
         <div class="flex justify-between items-center w-full">
@@ -51,19 +51,23 @@
                     />
                 </svg>
             </div>
-            <ul class="hidden md:flex items-center space-x-5">
+            <ul class="hidden md:flex items-center">
                 {#each links as link}
-                    <li
-                        class="hover:text-neutral-50 transition-colors"
-                    >
-                        <a href={link.url} rel="prefetch">{link.name}</a>
+                    <li>
+                        <a
+                            href={link.url}
+                            rel="prefetch"
+                            class="hover:text-neutral-50 hover:bg-neutral-400/20 px-4 py-2 rounded-md transition-all"
+                            >{link.name}</a
+                        >
                     </li>
                 {/each}
             </ul>
         </div>
         <!-- nav btn -->
         <button
-            class="hover:text-neutral-50 md:hidden transition-colors text-xl"
+            class="md:hidden"
+            type="button"
             on:click={() => {
                 document
                     .getElementById("mobile-menu")
@@ -71,7 +75,7 @@
             }}
         >
             <svg
-                class="w-6 h-6 fill-neutral-50 hover:fill-neutral-50 transition-colors"
+                class="w-5 h-5 fill-neutral-200 hover:fill-neutral-50 transition-colors"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
                 ><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
@@ -84,7 +88,7 @@
     <ul class="hidden md:hidden space-y-1 pt-4" id="mobile-menu">
         {#each links as link}
             <li
-                class="hover:text-neutral-50 hover:bg-slate-400/20 transition-colors p-2"
+                class="hover:text-neutral-50 hover:bg-slate-400/20 rounded-sm transition-all p-2"
             >
                 <a href={link.url} rel="prefetch" class="block w-full"
                     >{link.name}</a
