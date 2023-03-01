@@ -1,99 +1,95 @@
 <script lang="ts">
+    let currentPath: string = window.location.pathname;
+
     interface Link {
         name: string;
         url: string;
     }
+
     const links: Link[] = [
         {
-            name: "Devlog",
+            name: "/",
+            url: "/",
+        },
+        {
+            name: "/devlog",
             url: "/devlog",
         },
         {
-            name: "Labs",
+            name: "/labs",
             url: "/labs",
         },
         {
-            name: "Contact",
+            name: "/contact",
             url: "/contact",
         },
         {
-            name: "About",
+            name: "/about",
             url: "/about",
-        },
-        {
-            name: "Sponsor",
-            url: "https://patreon.com/hammadmajid",
         },
     ];
 </script>
 
-<nav class="text-neutral-200 py-5 px-4 select-none">
-    <div class="flex justify-between pb-3 border-b-2 border-b-neutral-400/50">
-        <!-- desktop navigation -->
-        <div class="flex justify-between items-center w-full">
-            <div class="flex items-center w-9 h-9">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 205 152"
-                    fill="none"
-                >
-                    <path
-                        d="M90.375 29V28H88.8908L89.4482 29.3756L90.375 29ZM102.062 29L102.99 28.6271L102.738 28H102.062V29ZM131.875 103.188L130.947 103.56L131.876 105.872L132.803 103.56L131.875 103.188ZM161.625 29V28H160.949L160.697 28.6278L161.625 29ZM173.375 29L174.301 29.3767L174.861 28H173.375V29ZM136.375 120V121H137.048L137.301 120.377L136.375 120ZM127.25 120L126.323 120.376L126.576 121H127.25V120ZM86.5625 29V28H85.5625V29H86.5625ZM96.875 29L97.8745 28.9696L97.8451 28H96.875V29ZM98.5625 84.5H99.5625V84.4848L99.562 84.4696L98.5625 84.5ZM98.5625 120V121H99.5625V120H98.5625ZM86.5625 120H85.5625V121H86.5625V120ZM166.812 29V28H165.842L165.813 28.9696L166.812 29ZM177.125 29H178.125V28H177.125V29ZM177.125 120V121H178.125V120H177.125ZM165.125 120H164.125V121H165.125V120ZM165.125 84.5L164.125 84.4696L164.125 84.4848V84.5H165.125ZM90.375 30H102.062V28H90.375V30ZM101.135 29.3729L130.947 103.56L132.803 102.815L102.99 28.6271L101.135 29.3729ZM132.803 103.56L162.553 29.3722L160.697 28.6278L130.947 102.815L132.803 103.56ZM161.625 30H173.375V28H161.625V30ZM172.449 28.6233L135.449 119.623L137.301 120.377L174.301 29.3767L172.449 28.6233ZM136.375 119H127.25V121H136.375V119ZM128.177 119.624L91.3018 28.6244L89.4482 29.3756L126.323 120.376L128.177 119.624ZM86.5625 30H96.875V28H86.5625V30ZM95.8755 29.0304L97.563 84.5304L99.562 84.4696L97.8745 28.9696L95.8755 29.0304ZM97.5625 84.5V120H99.5625V84.5H97.5625ZM98.5625 119H86.5625V121H98.5625V119ZM87.5625 120V29H85.5625V120H87.5625ZM166.812 30H177.125V28H166.812V30ZM176.125 29V120H178.125V29H176.125ZM177.125 119H165.125V121H177.125V119ZM166.125 120V84.5H164.125V120H166.125ZM166.125 84.5304L167.812 29.0304L165.813 28.9696L164.125 84.4696L166.125 84.5304Z"
-                        fill="#FAFAFA"
-                    />
-                    <path
-                        d="M87 68.125V77.9375H37.75V68.125H87ZM39.625 29V120H27.5625V29H39.625ZM97.5 29V120H85.5V29H97.5Z"
-                        fill="#FAFAFA"
-                    />
-                    <path
-                        d="M87 68.125H88V67.125H87V68.125ZM87 77.9375V78.9375H88V77.9375H87ZM37.75 77.9375H36.75V78.9375H37.75V77.9375ZM37.75 68.125V67.125H36.75V68.125H37.75ZM39.625 29H40.625V28H39.625V29ZM39.625 120V121H40.625V120H39.625ZM27.5625 120H26.5625V121H27.5625V120ZM27.5625 29V28H26.5625V29H27.5625ZM97.5 29H98.5V28H97.5V29ZM97.5 120V121H98.5V120H97.5ZM85.5 120H84.5V121H85.5V120ZM85.5 29V28H84.5V29H85.5ZM86 68.125V77.9375H88V68.125H86ZM87 76.9375H37.75V78.9375H87V76.9375ZM38.75 77.9375V68.125H36.75V77.9375H38.75ZM37.75 69.125H87V67.125H37.75V69.125ZM38.625 29V120H40.625V29H38.625ZM39.625 119H27.5625V121H39.625V119ZM28.5625 120V29H26.5625V120H28.5625ZM27.5625 30H39.625V28H27.5625V30ZM96.5 29V120H98.5V29H96.5ZM97.5 119H85.5V121H97.5V119ZM86.5 120V29H84.5V120H86.5ZM85.5 30H97.5V28H85.5V30Z"
-                        fill="#FAFAFA"
-                    />
-                </svg>
+<nav class="text-slate-200 select-none border-b-2 border-gray-400/60 py-4">
+    <div class="px-4">
+        <div class="flex justify-between">
+            <!-- desktop navigation -->
+            <div class="flex justify-between items-center w-full">
+                <div class="flex items-center w-9 h-9">
+                    <a
+                        href={currentPath}
+                        class="hover:text-slate-100 transition-colors"
+                        >{currentPath}</a
+                    >
+                </div>
+                <ul class="hidden md:flex items-center space-x-8">
+                    {#each links as link}
+                        {#if link.url !== currentPath}
+                            <li>
+                                <a
+                                    href={link.url}
+                                    rel="prefetch"
+                                    class="hover:text-neutral-100 transition-colors"
+                                    >{link.name}</a
+                                >
+                            </li>
+                        {/if}
+                    {/each}
+                </ul>
             </div>
-            <ul class="hidden md:flex items-center">
-                {#each links as link}
-                    <li>
-                        <a
-                            href={link.url}
-                            rel="prefetch"
-                            class="hover:text-neutral-50 hover:bg-neutral-400/20 px-4 py-2 rounded-md transition-all"
+            <!-- nav btn -->
+            <button
+                class="md:hidden"
+                type="button"
+                on:click={() => {
+                    document
+                        .getElementById("mobile-menu")
+                        .classList.toggle("hidden");
+                }}
+            >
+                <svg
+                    class="w-5 h-5 fill-slate-200 hover:fill-neutral-100 transition-colors"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    ><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    /></svg
+                >
+            </button>
+        </div>
+        <!-- mobile nav -->
+        <ul class="hidden md:hidden space-y-2 pt-2" id="mobile-menu">
+            {#each links as link}
+                {#if link.url !== currentPath}
+                    <li
+                        class="hover:text-neutral-100 transition-colors select-none"
+                    >
+                        <a href={link.url} rel="prefetch" class="block w-full"
                             >{link.name}</a
                         >
                     </li>
-                {/each}
-            </ul>
-        </div>
-        <!-- nav btn -->
-        <button
-            class="md:hidden"
-            type="button"
-            on:click={() => {
-                document
-                    .getElementById("mobile-menu")
-                    .classList.toggle("hidden");
-            }}
-        >
-            <svg
-                class="w-5 h-5 fill-neutral-200 hover:fill-neutral-50 transition-colors"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                ><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                /></svg
-            >
-        </button>
+                {/if}
+            {/each}
+        </ul>
     </div>
-    <!-- mobile nav -->
-    <ul class="hidden md:hidden space-y-1 pt-4" id="mobile-menu">
-        {#each links as link}
-            <li
-                class="hover:text-neutral-50 hover:bg-slate-400/20 rounded-sm transition-all p-2"
-            >
-                <a href={link.url} rel="prefetch" class="block w-full"
-                    >{link.name}</a
-                >
-            </li>
-        {/each}
-    </ul>
 </nav>
