@@ -1,6 +1,4 @@
 <script lang="ts">
-    let currentPath: string = window.location.pathname;
-
     interface Link {
         name: string;
         url: string;
@@ -8,23 +6,19 @@
 
     const links: Link[] = [
         {
-            name: "/",
-            url: "/",
-        },
-        {
-            name: "/devlog",
+            name: "Devlog",
             url: "/devlog",
         },
         {
-            name: "/labs",
+            name: "Labs",
             url: "/labs",
         },
         {
-            name: "/contact",
+            name: "Contact",
             url: "/contact",
         },
         {
-            name: "/about",
+            name: "About",
             url: "/about",
         },
     ];
@@ -36,24 +30,20 @@
             <!-- desktop navigation -->
             <div class="flex justify-between items-center w-full">
                 <div class="flex items-center w-9 h-9">
-                    <a
-                        href={currentPath}
-                        class="hover:text-slate-100 transition-colors"
-                        >{currentPath}</a
-                    >
+                    <a href="/" class="hover:text-slate-100 transition-colors">
+                        /
+                    </a>
                 </div>
                 <ul class="hidden md:flex items-center space-x-8">
                     {#each links as link}
-                        {#if link.url !== currentPath}
-                            <li>
-                                <a
-                                    href={link.url}
-                                    rel="prefetch"
-                                    class="hover:text-neutral-100 transition-colors"
-                                    >{link.name}</a
-                                >
-                            </li>
-                        {/if}
+                        <li>
+                            <a
+                                href={link.url}
+                                rel="prefetch"
+                                class="hover:text-neutral-100 transition-colors"
+                                >{link.name}</a
+                            >
+                        </li>
                     {/each}
                 </ul>
             </div>
@@ -80,15 +70,13 @@
         <!-- mobile nav -->
         <ul class="hidden md:hidden space-y-2 pt-2" id="mobile-menu">
             {#each links as link}
-                {#if link.url !== currentPath}
-                    <li
-                        class="hover:text-neutral-100 transition-colors select-none"
+                <li
+                    class="hover:text-neutral-100 transition-colors select-none"
+                >
+                    <a href={link.url} rel="prefetch" class="block w-full"
+                        >{link.name}</a
                     >
-                        <a href={link.url} rel="prefetch" class="block w-full"
-                            >{link.name}</a
-                        >
-                    </li>
-                {/if}
+                </li>
             {/each}
         </ul>
     </div>
