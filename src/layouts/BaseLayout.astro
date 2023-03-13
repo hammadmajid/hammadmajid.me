@@ -32,8 +32,10 @@ const { title, description } = Astro.props as Props;
             gtag("config", "G-FN4NFCRDZ1");
         </script></head
     >
-    <body class="bg-zinc-900 text-slate-100 min-h-screen">
+    <body class="bg-zinc-900 text-slate-100 flex flex-col h-screen">
         <Navbar client:only />
-        <slot />
+        <div class="grow">
+            <slot />
+        </div>
     </body>
 </html>
