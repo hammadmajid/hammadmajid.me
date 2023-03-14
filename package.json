@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^1.0.3",
-    "@astrojs/prefetch": "^0.1.2",
+    "@astrojs/prefetch": "^0.2.1",
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.0.1",
