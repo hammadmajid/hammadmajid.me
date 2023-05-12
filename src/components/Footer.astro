@@ -1,58 +1,60 @@
 ---
 import Icon from 'astro-icon';
+
+const links: { label: string; href: string; icon: string }[] = [
+  {
+    label: 'Email',
+    href: 'mailto:mail@hammadmajid.com',
+    icon: 'envelope',
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/hammadmajid',
+    icon: 'github',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/hammadmajid',
+    icon: 'linkedin',
+  },
+  {
+    label: 'Mastodon',
+    href: 'https://techhub.social/@hammadmajid',
+    icon: 'mastodon',
+  },
+  {
+    label: 'Figma',
+    href: 'https://figma.com/@hammadmajid',
+    icon: 'figma',
+  },
+  {
+    label: 'Twitter',
+    href: 'https://www.twitter.com/hammadmajid_4',
+    icon: 'twitter',
+  },
+];
 ---
 
-<footer class="pt-6 pb-4">
-  <div class="flex flex-row justify-center items-center gap-3">
-    <a
-      href="mailto:mail@hammadmajid.com"
-      target="_blank"
-      aria-label="Email"
-    >
-      <Icon
-        name="envelope"
-        class="w-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      />
-    </a><a
-      href="https://github.com/hammadmajid"
-      target="_blank"
-      aria-label="GitHub profile"
-      ><Icon
-        name="github"
-        class="w-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      /></a
-    ><a
-      href="https://www.linkedin.com/in/hammadmajid"
-      target="_blank"
-      aria-label="LinkedIn profile"
-      ><Icon
-        name="linkedin"
-        class="w-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      /></a
-    ><a
-      href="https://techhub.social/@hammadmajid"
-      target="_blank"
-      aria-label="Mastodon profile"
-      ><Icon
-        name="mastodon"
-        class="w-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      /></a
-    ><a
-      href="https://figma.com/@hammadmajid"
-      target="_blank"
-      aria-label="Figma profile"
-      ><Icon
-        name="figma"
-        class="w-4 h-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      /></a
-    ><a
-      href="https://www.twitter.com/hammadmajid_4"
-      target="_blank"
-      aria-label="Twitter profile"
-      ><Icon
-        name="twitter"
-        class="w-4 fill-neutral-500 hover:fill-neutral-300 active:fill-neutral-300 transition-colors"
-      /></a
-    >
+<footer
+  class="pt-6 md:pb-4 md:px-24 md:flex md:flex-row md:items-center md:justify-between"
+>
+  <p class="hidden md:block text-neutral-500 text-sm">
+    “Simplicity, carried to the extreme, becomes elegance.” ~ Jon Franklin
+  </p>
+  <div
+    class="flex flex-row justify-center items-center gap-2 p-2 bg-neutral-200 rounded-md"
+  >
+    {
+      links.map((link) => {
+        return (
+          <a href={link.href} aria-label={link.label} class="p-2 group">
+            <Icon
+              name={link.icon}
+              class="w-4 h-4 fill-neutral-500 group-hover:fill-neutral-700 group-active:fill-neutral-700 transition-colors"
+            />
+          </a>
+        );
+      })
+    }
   </div>
 </footer>
