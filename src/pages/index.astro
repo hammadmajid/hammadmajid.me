@@ -1,56 +1,36 @@
 ---
 export const prerender = true;
 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Button from '~/components/Button.astro';
 ---
 
 <BaseLayout title="Hammad Majid" description="Front-end developer">
   <main class="h-full grid items-center">
-    <div class="px-4 py-5">
+    <div class="px-24 py-5">
       <header class="space-y-1">
         <h1 class="text-4xl font-semibold">Hammad Majid</h1>
         <p>Front-end developer</p>
       </header>
       <div class="flex flex-row space-x-4 items-center mt-6">
-        <a
-          href="mailto:mail@hammadmajid.com"
-          class="flex space-x-2 bg-orange-200/80 ring-orange-200/80 ring-2 hover:bg-orange-300/80 hover:ring-orange-300/80 text-slate-900 font-medium transition-colors px-4 py-2 rounded-sm"
-        >
-          <span>Get in touch</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-          </svg>
-        </a>
-        <a
+        <!--
+          flex space-x-2 bg-neutral-200/80 ring-neutral-200/80 ring-2 hover:bg-neutral-300/80 hover:ring-neutral-300/80 text-slate-900 font-medium transition-colors px-4 py-2 rounded-sm
+         -->
+        <Button
+          icon="arrow-right"
+          order="text-icon"
+          style="filled"
+          text="Get in touch"
+          href="/contact"
+        />
+        <!-- class="flex space-x-2 ring-slate-100/90 hover:ring-neutral-300/80 ring-2 px-4 py-2 rounded-sm transition-colors" -->
+        <Button
+          icon="github"
+          order="icon-text"
+          style="ghost-outlined"
+          text="github"
           href="https://github.com/hammadmajid"
-          class="flex space-x-2 ring-slate-100/90 hover:ring-orange-300/80 ring-2 px-4 py-2 rounded-sm transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-            ></path>
-          </svg>
-          <span>Code</span></a
-        >
+        />
       </div>
     </div>
   </main>
