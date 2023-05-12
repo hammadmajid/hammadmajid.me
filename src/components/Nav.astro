@@ -1,64 +1,56 @@
 ---
-interface Link {
-  name: string;
-  url: string;
-}
+import Icon from 'astro-icon';
 
-const links: Link[] = [
+const links: { text: string; href: string }[] = [
   {
-    name: 'Pages',
-    url: '/pages',
+    text: 'Notebooks',
+    href: '/notebooks',
   },
   {
-    name: 'Labs',
-    url: '/labs',
+    text: 'Lab',
+    href: '/lab',
   },
   {
-    name: 'Contact',
-    url: '/contact',
+    text: 'Contact',
+    href: '/contact',
   },
   {
-    name: 'About',
-    url: '/about',
+    text: 'Support',
+    href: '/support',
+  },
+  {
+    text: 'About',
+    href: '/about',
   },
 ];
 ---
 
-<nav class="text-slate-200 border-b-2 border-gray-400/60">
-  <div class="flex flex-col md:flex-row justify-between md:px-4">
+<nav class="text-neutral-500">
+  <div class="flex flex-col md:flex-row justify-between md:px-24">
     <div class="flex flex-row justify-between w-full">
-      <a href="/" class="text-2xl font-bold hover:text-slate-100 p-4">HM</a>
+      <a href="/" class="text-xl font-medium hover:text-slate-100 p-4">HM</a>
       <button
         type="button"
         aria-label="menu button"
         class="p-4 md:hidden"
-        id="menu-btn"
+        id="toggle-button"
       >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+        <Icon name="bars" class="w-6 h-6" />
       </button>
     </div>
-    <ul class="hidden md:flex md:flex-row items-center text-center" id="menu">
+    <ul
+      class="hidden md:flex md:flex-row items-center gap-2 text-center"
+      id="nav-menu"
+    >
       {
-        links.map((link) => {
+        links.map(({ text, href }) => {
           return (
-            <li class="">
+            <li>
               <a
-                href={link.url}
-                class="text-slate-300 p-2 block h-full hover:text-slate-200 transition-colors"
+                {href}
+                class="p-2 block h-full hover:bg-neutral-200 active:bg-neutral-200 rounded-sm transition-colors"
               >
-                {link.name}
+                {text}
               </a>
             </li>
           );
@@ -69,10 +61,10 @@ const links: Link[] = [
 </nav>
 
 <script>
-  const menuButton = document.getElementById('menu-btn')!;
-  const menu = document.getElementById('menu')!;
+  const toggleButton: HTMLElement = document.getElementById('toggle-button')!;
+  const navMenu: HTMLElement = document.getElementById('nav-menu')!;
 
-  menuButton.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
   });
 </script>
