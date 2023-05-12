@@ -13,14 +13,13 @@ const { title, description } = Astro.props as Props;
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <slot name="head" />
     <link href="/favicon.svg" rel="icon" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <!-- TODO: add additional meta tags -->
   </head>
-  <body class="bg-neutral-900 text-neutral-200 flex flex-col h-screen">
+  <body class="bg-neutral-50 text-neutral-800 flex flex-col h-screen">
     <header>
       <Nav />
     </header>
@@ -32,6 +31,7 @@ const { title, description } = Astro.props as Props;
 </html>
 
 <script>
+  // @ts-nocheck
   import Swup from 'swup';
   import SwupA11yPlugin from '@swup/a11y-plugin';
   import SwupPreloadPlugin from '@swup/preload-plugin';
@@ -57,9 +57,5 @@ const { title, description } = Astro.props as Props;
 
   html.is-animating .transition-fade {
     opacity: 0;
-  }
-
-  .swup-progress-bar {
-    height: 100px;
   }
 </style>
