@@ -33,7 +33,7 @@ function getButtonStyle(style: Props['style'], order: Props['order']): string {
     if (style == 'filled') {
       return 'bg-neutral-800 hover:bg-neutral-950 text-neutral-100 fill-neutral-100';
     } else if (style == 'ghost-outlined') {
-      return 'bg-none text-neutral-800 hover:border-neutral-800';
+      return 'bg-none text-neutral-800 hover:bg-slate-200';
     } else {
       // filled-disabled
       return 'bg-neutral-600 cursor-not-allowed';
@@ -48,5 +48,5 @@ const Tag: 'a' | 'button' = href ? 'a' : 'button';
 
 <Tag class={getButtonStyle(type, order)} href={href} id={id}>
   <span class="font-semibold">{text}</span>
-  <Icon name={icon} class="w-6 h-6" />
+  <Icon name={icon} class="w-5 h-5" />
 </Tag>
