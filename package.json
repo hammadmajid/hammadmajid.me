@@ -1,7 +1,5 @@
 {
-  "name": "hammadmajid/site",
   "type": "module",
-  "version": "production",
   "private": true,
   "scripts": {
     "dev": "astro dev",
