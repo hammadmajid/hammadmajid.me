@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.2.2",
