@@ -25,5 +25,8 @@
     "svelte": "^3.59.1",
     "swup": "^3.0.6",
     "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "cypress": "^12.12.0"
   }
 }
