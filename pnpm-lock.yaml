@@ -34,6 +34,9 @@ dependencies:
   astro-icon:
     specifier: ^0.8.0
     version: 0.8.0
+  bootstrap-icons:
+    specifier: ^1.10.5
+    version: 1.10.5
   svelte:
     specifier: ^3.59.1
     version: 3.59.1
@@ -2521,6 +2524,10 @@ packages:
 
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+    dev: false
+
+  /bootstrap-icons@1.10.5:
+    resolution: {integrity: sha512-oSX26F37V7QV7NCE53PPEL45d7EGXmBgHG3pDpZvcRaKVzWMqIRL9wcqJUyEha1esFtM3NJzvmxFXDxjJYD0jQ==}
     dev: false
 
   /boxen@6.2.1:
