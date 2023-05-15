@@ -1,6 +1,4 @@
 ---
-import Icon from 'astro-icon';
-
 export interface Props {
   text?: string;
   icon?: string;
@@ -47,6 +45,6 @@ const Tag: 'a' | 'button' = href ? 'a' : 'button';
 ---
 
 <Tag class={getButtonStyle(type, order)} href={href} id={id}>
-  <span class="font-semibold">{text}</span>
-  <Icon name={icon} class="w-5 h-5" />
+  <span>{text}</span>
+  <i class={icon}></i>
 </Tag>
