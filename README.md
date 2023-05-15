@@ -1,5 +1,7 @@
 # hammadmajid.com
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0494b548-1fbc-47af-be8f-39292f79f182/deploy-status)](https://app.netlify.com/sites/hammadmajid/deploys) [![CodeFactor](https://www.codefactor.io/repository/github/hammadmajid/hammadmajid.com/badge)](https://www.codefactor.io/repository/github/hammadmajid/hammadmajid.com) ![Lines of code](https://img.shields.io/tokei/lines/github/hammadmajid/hammadmajid.com?label=Lines%20of%20code) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hammadmajid/hammadmajid.com?color=%23ff545f&label=Commit%20activity)
+
 This repository contains the souce code for [hammadmajid.com](https://hammadmajid.com) website.
 
 ## Licence
