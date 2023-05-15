@@ -1,16 +1,14 @@
 # hammadmajid.com
 
-This repository contains the souce code for [hammadmajid.com](https://hammadmajid.com). 
+This repository contains the souce code for [hammadmajid.com](https://hammadmajid.com) website.
 
 ## Licence
 
-MIT: Source code (`*/**`) 
-
-CC4: Content genrated after build at `notebooks/[notebook]/*`
+This repository is licensed under **MIT License**. You may copy, distribute, and modify it under the terms of the license contained in the file `./LICENSE`.
 
 ## Setup
 
-Make sure that you have pnpm installed on your machine before contineing.
+The below steps assume that you PNPM, Node and Git installed on your machince.
 
 ```sh
 # Clone the repo
@@ -26,9 +24,23 @@ pnpm build
 pnpm dev
 ```
 
-### Docker
+### Dependencies
 
-You can also use [Docker](https://docker.com) to start and build
+Here is the list of all the dependecies and thier purpose:
+
+| Name | Purpose | Resources |
+| :--- | :---- | :--- |
+| Astro | The main framework used to build this website | [Homepage](https://astro.build) | 
+| Tailwind | UI framework used to style the website | [Homepage](https://tailwind.con/) |
+
+## Contributors guidelines
+
+If you're looking for a way to contribute, you can scan through our [existing issues](https://github.com/hammadmajid/hammadmajid.com/issues/) for something to work on.
+See the [contributing guide](./CONTRIBUTING.md) for detailed instructions on how to get started with this project.
+
+## Code of Conduct
+
+This project has adopted the **Contributor Covenant Code of Conduct**. For any questions or comment you can contact at [mail@hammadmajid.com](mailto:mail@hammadmajid.com).
 
 ---
 <sub>Made with ❤️ by <a href="https://github.com/hammadmajid">Hammad Majid</a> and *you*.</a>
