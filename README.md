@@ -1,4 +1,4 @@
-# hammadmajid.com
+<h1 align="center">hammadmajid.com</h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0494b548-1fbc-47af-be8f-39292f79f182/deploy-status)](https://app.netlify.com/sites/hammadmajid/deploys) [![CodeFactor](https://www.codefactor.io/repository/github/hammadmajid/hammadmajid.com/badge)](https://www.codefactor.io/repository/github/hammadmajid/hammadmajid.com) ![Lines of code](https://img.shields.io/tokei/lines/github/hammadmajid/hammadmajid.com?label=Lines%20of%20code) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hammadmajid/hammadmajid.com?color=%23ff545f&label=Commit%20activity)
 
@@ -6,11 +6,11 @@ This repository contains the souce code for [hammadmajid.com](https://hammadmaji
 
 ## Licence
 
-This repository is licensed under **MIT License**. You may copy, distribute, and modify it under the terms of the license contained in the file `./LICENSE`.
+The souce code in this repository is licensed under the **MIT License**. You may copy, distribute, and modify it under the terms of the license contained in the file `./LICENSE`.
 
 ## Setup
 
-The below steps assume that you PNPM, Node and Git installed on your machince.
+Install pnpm, node and git before you continue the below steps.
 
 ```sh
 # Clone the repo
@@ -30,14 +30,21 @@ pnpm dev
 
 Here is the list of all the dependecies and thier purpose:
 
-| Name | Purpose | Resources |
-| :--- | :---- | :--- |
-| Astro | The main framework used to build this website | [Homepage](https://astro.build) | 
-| Tailwind | UI framework used to style the website | [Homepage](https://tailwind.con/) |
+| Name | Description | 
+| :--- | :---- | 
+| Astro.js | All-in-one web framework | 
+| TailwindCSS | A utitility first CSS framework |
+| Swup | Page transition library |
+| Cypress | Javascript componenet testing and E2E testing framework |
+| @astrojs/partytown | Lazy-loaded library to help relocate resource intensive scripts into a web worker |
+| @astrojs/prefetch | Prefetch's page links when they visible on screen |
+| @astrojs/netlify | Netlify adapter for Astro.js |
+| @astrojs/sitemap | Generates sitemap at build time |
+| @astrojs/svelte | Enables server-side rendering and client-side hydration for your Svelte components |
 
 ## Contributors guidelines
 
-If you're looking for a way to contribute, you can scan through our [existing issues](https://github.com/hammadmajid/hammadmajid.com/issues/) for something to work on.
+If you're looking for a way to contribute, you can scan through the [existing issues](https://github.com/hammadmajid/hammadmajid.com/issues/) for something to work on.
 See the [contributing guide](./CONTRIBUTING.md) for detailed instructions on how to get started with this project.
 
 ## Code of Conduct
