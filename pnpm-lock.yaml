@@ -23,8 +23,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0(swup@3.0.6)
   '@swup/preload-plugin':
-    specifier: ^2.1.0
-    version: 2.1.0(swup@3.0.6)
+    specifier: ^2.2.0
+    version: 2.2.0(swup@3.0.6)
   '@swup/progress-plugin':
     specifier: ^2.0.0
     version: 2.0.0(swup@3.0.6)
@@ -1989,8 +1989,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/preload-plugin@2.1.0(swup@3.0.6):
-    resolution: {integrity: sha512-iO1ymbQi22P31UxdxZJ1w0i+MJclT2cNhOu7OkzRY9SuRYnr3cPv0+8i0F/7mu9lmIjZqMsQ75a62k57nnYR5A==}
+  /@swup/preload-plugin@2.2.0(swup@3.0.6):
+    resolution: {integrity: sha512-dzjTlvFICdhSsYejb4WX6mEKQOaBTcLp0XD0l2O1puIOGpX8kcnujKbZOuDsebxmcOkWPM0ZVvDzu6ZXomb6Fw==}
     peerDependencies:
       swup: ^3.0.0
     dependencies:
