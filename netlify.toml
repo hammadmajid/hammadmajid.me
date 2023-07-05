@@ -2,3 +2,14 @@
   base = "."
   publish = "./dist"
   command = "astro build"
+
+# See: https://github.com/netlify-labs/netlify-plugin-a11y
+[[plugins]]
+  package = "@netlify/plugin-a11y"
+  [plugins.inputs]
+    # Check all HTML files in this project
+    checkPaths = ['/']
+    # Fail the build if a11y issues are found
+    failWithIssues = true
+    # Perform a11y check against WCAG 2.1 AAA
+    wcagLevel = 'WCAG2AAA'
