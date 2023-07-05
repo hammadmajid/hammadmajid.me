@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.2.2
     version: 2.2.2(astro@2.7.4)
   '@astrojs/partytown':
-    specifier: ^1.2.1
-    version: 1.2.1
+    specifier: ^1.2.3
+    version: 1.2.3
   '@astrojs/prefetch':
     specifier: ^0.2.1
     version: 0.2.1
@@ -124,8 +124,8 @@ packages:
       esbuild: 0.15.18
     dev: false
 
-  /@astrojs/partytown@1.2.1:
-    resolution: {integrity: sha512-sFs4RKaahYOrHKy5rM6xf5xDavKpUICVxS0P0tQec5z3+FRq1Eo57MDTCx2QJoIhOHd3+/GgXDRHKWpbFI4RCw==}
+  /@astrojs/partytown@1.2.3:
+    resolution: {integrity: sha512-EYdeFfSEe5RTQsz+6Mxb9JLJWztZEOw0yjAxoDbntCdTkxDCnIwqRAhUwftx+zWsh+JIw1hOkLRNN8QOmwBiqA==}
     dependencies:
       '@builder.io/partytown': 0.7.6
       mrmime: 1.0.1
