@@ -25,13 +25,13 @@ dependencies:
     version: 3.1.2(astro@2.7.4)(tailwindcss@3.3.2)
   '@swup/a11y-plugin':
     specifier: ^3.0.0
-    version: 3.0.0(swup@3.0.6)
+    version: 3.0.0(swup@3.1.1)
   '@swup/preload-plugin':
     specifier: ^2.3.0
-    version: 2.3.0(swup@3.0.6)
+    version: 2.3.0(swup@3.1.1)
   '@swup/progress-plugin':
     specifier: ^2.0.0
-    version: 2.0.0(swup@3.0.6)
+    version: 2.0.0(swup@3.1.1)
   astro:
     specifier: ^2.7.4
     version: 2.7.4
@@ -42,8 +42,8 @@ dependencies:
     specifier: ^3.59.1
     version: 3.59.1
   swup:
-    specifier: ^3.0.6
-    version: 3.0.6
+    specifier: ^3.1.1
+    version: 3.1.1
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
@@ -1947,7 +1947,7 @@ packages:
       - supports-color
     dev: false
 
-  /@swup/a11y-plugin@3.0.0(swup@3.0.6):
+  /@swup/a11y-plugin@3.0.0(swup@3.1.1):
     resolution: {integrity: sha512-GcbfKST5coaikQCpklOjPqTKYpu3JQZ3wN1auFuTtgPmhZMznByX2/a5CzmjLGbYbHRIqY4z9qzB0iWb18s8Wg==}
     peerDependencies:
       swup: ^3.0.0
@@ -1955,7 +1955,7 @@ packages:
       '@swup/plugin': 2.0.2
       focus-options-polyfill: 1.6.0
       on-demand-live-region: 0.1.3
-      swup: 3.0.6
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -1977,20 +1977,20 @@ packages:
       prettier: 2.8.8
       shelljs: 0.8.5
       shelljs-live: 0.0.5(shelljs@0.8.5)
-      swup: 3.0.6
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/preload-plugin@2.3.0(swup@3.0.6):
+  /@swup/preload-plugin@2.3.0(swup@3.1.1):
     resolution: {integrity: sha512-FveiDLopKFzHXpWahEPjR2zi9JRPXJODb7OxJCKNHu1l2nVRCqxtrjAH9m6kk46ibdjaO7bWs143hN0pb0U2qw==}
     peerDependencies:
       swup: ^3.0.0
     dependencies:
       '@swup/plugin': 2.0.2
-      swup: 3.0.6
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2001,13 +2001,13 @@ packages:
     resolution: {integrity: sha512-NbbuG2zT+bQkPcUGyeLNFbiwdunc58e3A/GZpPpUDrXA4ZKN7/rNh97sfG6z5+0OfxrNmDE3N7t+60p5HKhc9w==}
     dev: false
 
-  /@swup/progress-plugin@2.0.0(swup@3.0.6):
+  /@swup/progress-plugin@2.0.0(swup@3.1.1):
     resolution: {integrity: sha512-jgaX0s42JjIbWtlkMGmV4nJC62O2ZfG7RHe8PoozKIX8NCjvg4xtUM1E7Xexyw5lVSG5vPCFsNI53/xR9Lwdgw==}
     peerDependencies:
       swup: ^3.0.0
     dependencies:
       '@swup/plugin': 2.0.2
-      swup: 3.0.6
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -3017,8 +3017,8 @@ packages:
       object-keys: 1.1.1
     dev: false
 
-  /delegate-it@3.0.1:
-    resolution: {integrity: sha512-XU8H4pjDGBW74hFIbjdLPnvtU3HF3P9bbZvoFBSBLb5JgNaTkRb/2lvC1V+9kmZsxVR0kad4bU3rYhQ/4Ij+Gw==}
+  /delegate-it@6.0.1:
+    resolution: {integrity: sha512-ZS2hRm/SaoPzaeWcWyYjzVVF4/PgALZqma9FXsunFt4XQGVAtQ79Vx7v57vNQNaI75Rl12C+x6TkLqHS5PNKLg==}
     dependencies:
       typed-query-selector: 2.10.1
     dev: false
@@ -6727,11 +6727,11 @@ packages:
       stable: 0.1.8
     dev: false
 
-  /swup@3.0.6:
-    resolution: {integrity: sha512-QgYueLK2ayuRZXGz58+xENFIwpXgflePU6SPiP4kcRWLv5s3ldbMKmmlTFto8lnJFu4aG44ZpxIDruli7se15w==}
+  /swup@3.1.1:
+    resolution: {integrity: sha512-fO8ID/SOYTCl5/Cm45rG3wFBFbrxnjeJ+S9q3eKJL1l3pjl6QUCZNqB4Tid4H0eQXlZv5dNDj4KD3AwWK5Il4w==}
     requiresBuild: true
     dependencies:
-      delegate-it: 3.0.1
+      delegate-it: 6.0.1
       opencollective-postinstall: 2.0.3
     dev: false
 
