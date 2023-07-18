@@ -42,7 +42,7 @@ const links: { label: string; href: string; icon: string }[] = [
     {
       links.map((link) => {
         return (
-          <a href={link.href} aria-label={link.label} class="p-2 group">
+          <a href={link.href} aria-label={link.label} class="p-2 group" rel="me">
             <Icon
               name={link.icon}
               class="w-4 h-4 fill-neutral-500 group-hover:fill-neutral-700 group-active:fill-neutral-700 transition-colors"
