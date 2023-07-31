@@ -20,7 +20,7 @@
     "@swup/a11y-plugin": "^3.0.0",
     "@swup/preload-plugin": "^2.3.0",
     "@swup/progress-plugin": "^2.0.0",
-    "astro": "^2.7.4",
+    "astro": "^2.9.6",
     "astro-icon": "^0.8.1",
     "svelte": "^3.59.1",
     "swup": "^3.0.6",
