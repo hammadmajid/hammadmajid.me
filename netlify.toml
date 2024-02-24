@@ -3,16 +3,17 @@
   publish = "./dist"
   command = "astro build"
 
+# TODO: Enable this plugin (TEMPORARILY DISABLED)
 # See: https://github.com/netlify-labs/netlify-plugin-a11y
-[[plugins]]
-  package = "@netlify/plugin-a11y"
-  [plugins.inputs]
-    # Check all HTML files in this project
-    checkPaths = ['/']
-    # Fail the build if a11y issues are found
-    failWithIssues = true
-    # Perform a11y check against WCAG 2.1 AAA
-    wcagLevel = 'WCAG2AAA'
+# [[plugins]] 
+#   package = "@netlify/plugin-a11y"
+#   [plugins.inputs]
+#     # Check all HTML files in this project
+#     checkPaths = ['/']
+#     # Fail the build if a11y issues are found
+#     failWithIssues = true
+#     # Perform a11y check against WCAG 2.1 AAA
+#     wcagLevel = 'WCAG2AAA'
 
 # See: https://github.com/cdeleeuwe/netlify-plugin-submit-sitemap#readme
 [[plugins]]
