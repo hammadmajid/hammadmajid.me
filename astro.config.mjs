@@ -19,7 +19,7 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://hammadmajid.com',
+  site: 'https://hammadmajid.me',
   integrations: [tailwind(), sitemap(), svelte(), partytown(), prefetch()],
   output: "server",
   adapter: netlify()
