@@ -7,7 +7,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cypress:open": "cypress open",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
