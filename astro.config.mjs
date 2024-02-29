@@ -12,15 +12,13 @@ import svelte from '@astrojs/svelte';
 import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
-import prefetch from '@astrojs/prefetch';
-
-// https://astro.build/config
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hammadmajid.me',
-  integrations: [tailwind(), sitemap(), svelte(), partytown(), prefetch()],
+  integrations: [tailwind(), sitemap(), svelte(), partytown()],
+  prefetch: true,
   output: "server",
   adapter: netlify()
 });
