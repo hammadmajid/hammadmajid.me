@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hammadmajid.com/sitemap-index.xml
+Sitemap: https://hammadmajid.me/sitemap-index.xml
