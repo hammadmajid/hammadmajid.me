@@ -1,5 +1,30 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import Button from '~/components/Button.astro';
 ---
 
-<BaseLayout title="Submission successful" description="" />
+<BaseLayout title="Submission successful" description="">
+  <main
+    class="flex flex-col md:flex-row stify-centerju items-center w-full h-full"
+  >
+    <div class="grid place-content-center p-12">
+      <div class="space-y-2 mb-4">
+        <h1 class="text-3xl font-bold">Submission Successful!</h1>
+        <p class="font-xl">Your form submission has been received.</p>
+      </div>
+      <Button
+        order="icon-text"
+        href="/"
+        icon="home"
+        style="filled"
+        text="Go home"
+      />
+    </div>
+    <div class="grid place-content-center p-12">
+      <img
+        src="/contact-success.png"
+        alt="A note flying around indecating success"
+      />
+    </div>
+  </main>
+</BaseLayout>
