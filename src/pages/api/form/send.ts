@@ -16,41 +16,36 @@ export const POST: APIRoute = async ({ request }) => {
   const email = data.get('email');
   const message = data.get('message');
 
-  let sendErr;
   const messageBody: string = `
-  name: ${name}\n
-  email: ${email}\n
+ name: ${name}\n
+ email: ${email}\n
   
-  ${message}
-  `;
+ ${message}
+ `;
 
-  client.send(
-    {
+  try {
+    await client.sendAsync({
       from: import.meta.env.EMAILJS_SEND_FROM,
       to: import.meta.env.EMAILJS_SEND_TO,
       subject: 'hammadmajid.me | New form submission',
       text: `${messageBody}`,
-    },
-    (err) => {
-      sendErr = err;
-    },
-  );
+    });
 
-  if (sendErr) {
     return new Response(
       JSON.stringify({
-        message: "Failed to submit form.",
-        status: 500,
+        message: "Form submitted successfully!",
+        status: 200,
+      }),
+      { status: 200 },
+    );
+  } catch (err) {
+    console.log(err);
+    return new Response(
+      JSON.stringify({
+        message: err.message,
+        status: err.code,
       }),
       { status: 500 },
     );
   }
-
-  return new Response(
-    JSON.stringify({
-      message: "Form submitted successfully!",
-      status: 200,
-    }),
-    { status: 200 },
-  );
 };
