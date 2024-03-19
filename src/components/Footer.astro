@@ -1,26 +1,26 @@
 ---
-import Icon from 'astro-icon';
+import Icon from '~/components/Icon.astro';
 
 const links: { label: string; href: string; icon: string }[] = [
   {
     label: 'GitHub',
     href: 'https://github.com/hammadmajid',
-    icon: 'github',
+    icon: 'fa-brands fa-github',
   },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/hammadmajid',
-    icon: 'linkedin',
+    icon: 'fa-brands fa-linkedin',
   },
   {
     label: 'Mastodon',
     href: 'https://techhub.social/@hammadmajid',
-    icon: 'mastodon',
+    icon: 'fa-brands fa-mastodon',
   },
   {
     label: 'Figma',
     href: 'https://figma.com/@hammadmajid',
-    icon: 'figma',
+    icon: 'fa-brands fa-figma',
   },
 ];
 ---
@@ -40,7 +40,7 @@ const links: { label: string; href: string; icon: string }[] = [
           <a href={link.href} aria-label={link.label} class="p-2 group" rel="me">
             <Icon
               name={link.icon}
-              class="w-4 h-4 fill-neutral-500 group-hover:fill-neutral-700 group-active:fill-neutral-700 transition-colors"
+              classes="w-4 h-4 fill-neutral-500 group-hover:fill-neutral-700 group-active:fill-neutral-700 transition-colors"
             />
           </a>
         );
