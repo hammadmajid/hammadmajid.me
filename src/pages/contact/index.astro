@@ -2,45 +2,17 @@
 export const prerender = true;
 
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Input from '~/components/Input.svelte';
-import Button from '~/components/Button.astro';
+import ContactForm from '~/components/ContactForm.svelte';
 ---
 
 <BaseLayout
   title="Contact | Hammad Majid"
   description="Contact Hammad Majid by filling out a form."
 >
-  <main>
+  <main class="grid place-items-center">
     <div class="grid place-content-center py-12">
       <h1 class="text-3xl font-bold">Contact</h1>
     </div>
-    <form
-      name="Contact"
-      method="post"
-      class="flex flex-col items-center justify-around space-y-4"
-    >
-      <Input
-        name="name"
-        label="Your name:"
-        placeholder="John Doe"
-        required={true}
-        type="text"
-      />
-      <Input
-        name="name"
-        label="Email:"
-        placeholder="johndoe@example.com"
-        required={true}
-        type="email"
-      />
-      <Input
-        name="name"
-        label="Your name:"
-        placeholder="Hello, there!"
-        required={true}
-        type="textarea"
-      />
-      <Button order="text-icon" style="filled" text="Send" icon="fa-solid fa-paper-plane" />
-    </form>
+    <ContactForm client:load />
   </main>
 </BaseLayout>
