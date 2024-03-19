@@ -18,6 +18,7 @@
     "@swup/a11y-plugin": "^4.5.0",
     "@swup/preload-plugin": "^3.2.10",
     "@swup/progress-plugin": "^3.1.2",
+    "@vercel/analytics": "^1.2.2",
     "astro": "^4.5.6",
     "svelte": "^4.2.12",
     "swup": "^4.6.0",

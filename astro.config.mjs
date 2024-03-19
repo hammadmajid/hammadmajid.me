@@ -19,5 +19,9 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), svelte(), partytown()],
   prefetch: true,
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    }
+  }),
 });
