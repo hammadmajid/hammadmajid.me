@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import Icon from '~/components/Icon.astro';
 
 const links: { text: string; href: string }[] = [
   {
@@ -31,7 +31,7 @@ const links: { text: string; href: string }[] = [
         class="p-4 md:hidden"
         id="toggle-button"
       >
-        <Icon name="bars" class="w-6 h-6" />
+        <Icon name="fa-solid fa-bars" classes="w-6 h-6" />
       </button>
     </div>
     <ul
