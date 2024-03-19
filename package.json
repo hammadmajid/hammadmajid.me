@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/netlify": "^2.6.0",
     "@astrojs/partytown": "^2.0.4",
-    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/svelte": "^3.1.1",
     "@astrojs/tailwind": "^4.0.0",
     "@swup/a11y-plugin": "^4.5.0",
