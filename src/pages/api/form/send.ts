@@ -39,10 +39,11 @@ export const POST: APIRoute = async ({ request }) => {
       { status: 200 },
     );
   } catch (err) {
-    console.log(err);
     return new Response(
       JSON.stringify({
+        // @ts-ignore
         message: err.message,
+        // @ts-ignore
         status: err.code,
       }),
       { status: 500 },
