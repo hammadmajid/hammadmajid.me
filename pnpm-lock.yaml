@@ -20,6 +20,12 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^7.3.6
     version: 7.3.6(astro@4.5.6)
+  '@storyblok/astro':
+    specifier: ^4.0.4
+    version: 4.0.4(astro@4.5.6)
+  '@storyblok/js':
+    specifier: ^3.0.7
+    version: 3.0.7
   '@swup/a11y-plugin':
     specifier: ^4.5.0
     version: 4.5.0(swup@4.6.0)
@@ -50,6 +56,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
+  vite:
+    specifier: ^5.1.6
+    version: 5.1.6
 
 packages:
 
@@ -832,6 +841,22 @@ packages:
     resolution: {integrity: sha512-OlFvx+nyr5C8zpcMBnSGir0YPD6K11uYhouqhNmm1qLiis4GA7SsGtu07r9gKS9omks8RtQqHrJL4S+lqWK01A==}
     dev: false
 
+  /@storyblok/astro@4.0.4(astro@4.5.6):
+    resolution: {integrity: sha512-ItSsWnzKzS5med5IUuCGepBYD5/6ZtIyffR5tHm8dkzrqsrk70pwDh08FINUIAALqn4OI89aDIhWL3RXaJAWJw==}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0
+    dependencies:
+      '@storyblok/js': 3.0.7
+      astro: 4.5.6(typescript@5.4.2)
+      camelcase: 8.0.0
+    dev: false
+
+  /@storyblok/js@3.0.7:
+    resolution: {integrity: sha512-m6MpUhjEpDWMKftyjJhTkthd/I6LZ9xhuT/Wxa1e99Cf4niVC5jgMVPQ5tOsUgn3D8BKNL+6PI3hEj5dGKB9xw==}
+    dependencies:
+      storyblok-js-client: 6.7.1
+    dev: false
+
   /@sveltejs/vite-plugin-svelte-inspector@2.0.0(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@4.2.12)(vite@5.1.6):
     resolution: {integrity: sha512-gjr9ZFg1BSlIpfZ4PRewigrvYmHWbDrq2uvvPB1AmTWKuM+dI1JXQSUu2pIrYLb/QncyiIGkFDFKTwJ0XqQZZg==}
     engines: {node: ^18.0.0 || >=20}
@@ -1417,6 +1442,11 @@ packages:
   /camelcase@7.0.1:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
+    dev: false
+
+  /camelcase@8.0.0:
+    resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
+    engines: {node: '>=16'}
     dev: false
 
   /caniuse-lite@1.0.30001599:
@@ -3804,6 +3834,10 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       bl: 5.1.0
+    dev: false
+
+  /storyblok-js-client@6.7.1:
+    resolution: {integrity: sha512-VOobZkor6BESji2MJUuO5jTIZeCWMUMR2LZtdSEEAtUDUfKwA88lGqDVMQqtWZ8nD7NzhZ6S7qvdv5Or9HZXRw==}
     dev: false
 
   /streamx@2.16.1:
