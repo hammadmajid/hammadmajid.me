@@ -1,27 +1,28 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from '@astrojs/tailwind';
-
-// https://astro.build/config
 import sitemap from '@astrojs/sitemap';
-
-// https://astro.build/config
 import svelte from '@astrojs/svelte';
-
-// https://astro.build/config
 import partytown from '@astrojs/partytown';
-
 import vercel from '@astrojs/vercel/serverless';
+import storyblok from '@storyblok/astro';
+import { loadEnv } from 'vite';
+
+const env = loadEnv('', process.cwd(), 'STORYBLOK');
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hammadmajid.me',
-  integrations: [tailwind(), sitemap(), svelte(), partytown()],
+  integrations: [tailwind(), sitemap(), svelte(), partytown(), storyblok({
+    accessToken: env.STORYBLOK_TOKEN,
+    components: {
+      'blogPost': 'storyblok/BlogPost',
+    },
+  })],
   prefetch: true,
   output: 'server',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
-    }
+    },
   }),
 });
