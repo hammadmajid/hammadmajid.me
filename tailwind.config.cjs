@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Atkinson-Hyperlegible': ['Atkinson-Hyperlegible', ...defaultTheme.fontFamily.sans],
+        'IBMPlexMono': ['IBMPlexMono', ...defaultTheme.fontFamily.mono],
       }
     },
     colors: {
