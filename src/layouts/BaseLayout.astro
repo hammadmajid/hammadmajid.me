@@ -51,6 +51,14 @@ const { title, description } = Astro.props as Props;
       new SwupPreloadPlugin(),
     ],
   });
+
+  // noinspection TypeScriptUnresolvedReference
+  swup.on('contentReplaced', () => {
+    document.documentElement.classList.add('is-animating');
+    setTimeout(() => {
+      document.documentElement.classList.remove('is-animating');
+    }, 500);
+  });
 </script>
 
 <style>
