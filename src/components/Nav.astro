@@ -1,66 +1,43 @@
 ---
-import Icon from '@components/Icon.astro';
+import icons from '@assets/icons.ts';
 
-const links: { text: string; href: string }[] = [
-  {
-    text: 'Blog',
-    href: '/blog',
-  },
-  {
-    text: 'Projects',
-    href: '/projects',
-  },
-  {
-    text: 'Contact',
-    href: '/contact',
-  },
-  {
-    text: 'About',
-    href: '/about',
-  },
-];
+const pages: string[] = ['Posts', 'Tags', 'Contact', 'About'];
 ---
-
-<nav class="text-neutral-500">
-  <div class="flex flex-col md:flex-row justify-between md:px-24">
-    <div class="flex flex-row justify-between w-full">
-      <a href="/" class="text-xl font-medium hover:text-slate-100 p-4">HM</a>
-      <button
-        type="button"
-        aria-label="menu button"
-        class="p-4 md:hidden"
-        id="toggle-button"
-      >
-        <Icon name="fa-solid fa-bars" classes="w-6 h-6" />
-      </button>
-    </div>
-    <ul
-      class="hidden md:flex md:flex-row items-center gap-2 text-center"
-      id="nav-menu"
-    >
-      {
-        links.map(({ text, href }) => {
-          return (
-            <li>
-              <a
-                {href}
-                class="p-2 block h-full hover:bg-neutral-200 active:bg-neutral-200 rounded-sm transition-colors"
-              >
-                {text}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
+<header class="flex flex-col sm:flex-row justify-between items-center p-4">
+  <div class="w-full flex flex-row justify-between items-center">
+    <a href="/" class="text-nowrap block font-medium text-xl">Hammad Majid</a>
+    <button class="block sm:hidden" id="open-button">
+      <Fragment set:html={icons.barsBottomRight} />
+    </button>
+    <button class="hidden sm:hidden" id="close-button">
+      <Fragment set:html={icons.xMark} />
+    </button>
   </div>
-</nav>
+  <nav id="nav-menu" class="hidden sm:block pt-4 sm:pt-0">
+    <ul class="text-center space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
+      {pages.map((page: string) => (
+        <li>
+          <a href={`/${page.toLowerCase()}`} class="hover:text-light-accent">{page}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
 
 <script>
-  const toggleButton: HTMLElement = document.getElementById('toggle-button')!;
+  const openButton: HTMLElement = document.getElementById('open-button')!;
+  const closeButton: HTMLElement = document.getElementById('close-button')!;
   const navMenu: HTMLElement = document.getElementById('nav-menu')!;
 
-  toggleButton.addEventListener('click', () => {
+  openButton.addEventListener('click', () => {
     navMenu.classList.toggle('hidden');
+    openButton.classList.toggle('hidden');
+    closeButton.classList.toggle('hidden');
+  });
+
+  closeButton.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    openButton.classList.toggle('hidden');
+    closeButton.classList.toggle('hidden');
   });
 </script>
