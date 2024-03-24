@@ -1,36 +1,34 @@
 ---
+import icons from "@assets/icons";
+
 // noinspection JSUnusedGlobalSymbols
 export const prerender: boolean = true;
 
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Button from '@components/Button.astro';
 ---
 
-<BaseLayout title="Hammad Majid" description="I'm Hammad Majid a front-end developer with a passion for writing web applications using technologies like Astro and Svelte. I also like to experiment with low-level programming languages such as assembly, constantly pushing the boundaries of what's possible with code. It's a challenging but rewarding pursuit that keeps me engaged and motivated.">
-  <main class="h-full grid items-center">
-    <div class="px-12 md:px-24 py-5">
-      <header class="space-y-1">
-        <h1 class="text-4xl font-semibold">Hammad Majid</h1>
-        <p>Front-end developer</p>
-      </header>
-      <div
-        class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2 items-start mt-6"
-      >
-        <Button
-          icon="fa-solid fa-arrow-right"
-          order="text-icon"
-          style="filled"
-          text="Get in touch"
-          href="/contact"
-        />
-        <Button
-          icon="fa-brands fa-github"
-          order="icon-text"
-          style="ghost-outlined"
-          text="github"
-          href="https://github.com/hammadmajid"
-        />
+<BaseLayout title="Hammad Majid"
+            description="I'm Hammad Majid but you can call me Bine. I become me when I combine my love for Theory. Chaos. Movies. Programming. Supernovas. Music & Tea.">
+  <main class="p-4 space-y-8">
+    <section class="space-y-4">
+      <div class="flex flex-row items-center gap-1">
+        <h1 class="text-2xl font-bold">Bine</h1>
+        <a href="/rss.xml">
+          <Fragment set:html={icons.rss} />
+          <span class="sr-only">RSS Feed</span>
+        </a>
       </div>
-    </div>
+      <p class="text-lg text-justify">
+        Hi👋, I'm Hammad Majid but you can call me Bine. I become me when I combine my love for Theory. Chaos. Movies.
+        Programming. Supernovas. Music & Tea. </p>
+    </section>
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold">Posts</h2>
+      <p>Not posts yet.</p>
+    </section>
+    <section>
+      <h2 class="text-xl font-bold">Projects</h2>
+      <p>Not projects yet.</p>
+    </section>
   </main>
 </BaseLayout>
